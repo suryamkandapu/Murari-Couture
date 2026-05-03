@@ -1,64 +1,88 @@
 'use client';
 
-'use client';
-
 import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <div className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="pt-16 pb-12 px-4 bg-gray-50 min-h-screen">
+      <div className="max-w-6xl mx-auto">
+
+        {/* Title */}
         <motion.h1
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16"
         >
           About Murari Couture
         </motion.h1>
-        
+
+        {/* SECTION 1 */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
+          className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl font-bold mb-4">Our Story</h2>
-              <p className="text-gray-600 mb-4">
-                Founded in 2023, Murari Couture started as a passion project to create unique, high-quality blouse designs that empower women to express their personal style.
-              </p>
-              <p className="text-gray-600">
-                What began as a small boutique has grown into a trusted name in custom fashion, known for our attention to detail and commitment to craftsmanship.
-              </p>
-            </div>
-            <div className="h-64 bg-gray-200 rounded-lg">
-              <img src="/b5.jpg" alt="About image" className="w-full h-full object-cover rounded-lg" />
-            </div>
+          {/* Image */}
+          <div className="overflow-hidden rounded-3xl shadow-lg">
+            <img
+              src="/b5.jpg"
+              alt="Our Story"
+              className="w-full h-[280px] md:h-[420px] object-cover hover:scale-105 transition duration-700"
+            />
+          </div>
+
+          {/* Text */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              Our Story
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Founded in 2023, Murari Couture began as a passion to craft
+              unique, high-quality blouse designs that empower women to
+              express their individuality.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              From a small boutique, we’ve grown into a trusted name known for
+              precision, craftsmanship, and timeless elegance.
+            </p>
           </div>
         </motion.div>
 
+        {/* SECTION 2 (reverse layout) */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="h-64 bg-gray-200 rounded-lg">
-              <img src="/b6.jpg" alt="About image" className="w-full h-full object-cover rounded-lg" />
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold mb-4">Our Philosophy</h2>
-              <p className="text-gray-600 mb-4">
-                We believe that fashion should be personal, timeless, and made to last. Each piece is carefully crafted with premium materials and attention to every detail.
-              </p>
-              <p className="text-gray-600">
-                Our designs blend modern aesthetics with classic elegance, ensuring our clients look and feel their best in any occasion.
-              </p>
-            </div>
+          {/* Text */}
+          <div className="order-2 md:order-1">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              Our Philosophy
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Fashion should be personal, timeless, and meaningful. Every piece
+              we create is tailored with attention to detail and premium quality.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              We blend modern aesthetics with traditional craftsmanship so you
+              always feel confident, elegant, and unique.
+            </p>
+          </div>
+
+          {/* Image */}
+          <div className="order-1 md:order-2 overflow-hidden rounded-3xl shadow-lg">
+            <img
+              src="/b6.jpg"
+              alt="Our Philosophy"
+              className="w-full h-[280px] md:h-[420px] object-cover hover:scale-105 transition duration-700"
+            />
           </div>
         </motion.div>
+
       </div>
     </div>
   );
