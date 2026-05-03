@@ -1,49 +1,123 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { generateWhatsAppLink } from '../../lib/whatsapp';
 
 export default function Contact() {
   return (
-    <div className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-semibold">Phone</h3>
-                <a href="tel:+916303134161" className="text-gray-600 hover:text-black">+91 6303134161</a>
+    <div className="pt-16 pb-12 px-4 min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+      <div className="max-w-6xl mx-auto">
+
+        {/* TITLE */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16"
+        >
+          Get in Touch
+        </motion.h1>
+
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+
+          {/* LEFT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/70 backdrop-blur-xl border border-gray-200 rounded-3xl p-6 md:p-8 shadow-xl"
+          >
+            <h2 className="text-2xl font-semibold mb-6">Contact Details</h2>
+
+            <div className="space-y-6">
+
+              {/* PHONE */}
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-black text-white text-xl shadow-md">
+                  📞
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Phone</p>
+                  <a
+                    href="tel:+916303134161"
+                    className="text-lg font-medium hover:text-black transition"
+                  >
+                    +91 6303 134 161
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold">Email</h3>
-                <a href="mailto:surya630313@gmail.com" className="text-gray-600 hover:text-black">surya630313@gmail.com</a>
+
+              {/* EMAIL */}
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-black text-white text-xl shadow-md">
+                  ✉️
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Email</p>
+                  <a
+                    href="mailto:surya630313@gmail.com"
+                    className="text-lg font-medium hover:text-black transition"
+                  >
+                    surya630313@gmail.com
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold">WhatsApp</h3>
+
+              {/* WHATSAPP */}
+              <div className="pt-4">
                 <a
                   href={generateWhatsAppLink()}
-                  className="inline-block bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center w-full px-6 py-4 rounded-2xl bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold text-lg overflow-hidden shadow-lg"
                 >
-                  Message us on WhatsApp
+                  <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition"></span>
+
+                  <span className="relative flex items-center gap-2">
+                    💬 Chat on WhatsApp
+                  </span>
                 </a>
               </div>
+
             </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-6">Visit Us</h2>
-            <div className="h-64 bg-gray-200 rounded-lg">
-              {/* Placeholder for Google Maps iframe */}
+          </motion.div>
+
+          {/* RIGHT SIDE MAP */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl overflow-hidden shadow-xl border border-gray-200"
+          >
+            <div className="h-[280px] md:h-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-73.98!3d40.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzAwLjAiTiA3M8KwNTgnNDguMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps?q=Hyderabad&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen=""
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
             </div>
-          </div>
+          </motion.div>
+
         </div>
+
+        {/* EXTRA SECTION (Luxury Touch) */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mt-12 md:mt-20 text-center"
+        >
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+            Custom Designs, Just for You ✨
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Share your design ideas, inspirations, or requirements — and we’ll craft
+            a blouse that perfectly matches your vision with precision and elegance.
+          </p>
+        </motion.div>
+
       </div>
     </div>
   );
