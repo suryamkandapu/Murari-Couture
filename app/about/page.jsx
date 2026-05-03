@@ -14,7 +14,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold text-center mb-12"
         >
-          About Project G
+          About Murari Couture
         </motion.h1>
         
         <motion.div
@@ -27,7 +27,7 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-bold mb-4">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Founded in 2023, Project G started as a passion project to create unique, high-quality blouse designs that empower women to express their personal style.
+                Founded in 2023, Murari Couture started as a passion project to create unique, high-quality blouse designs that empower women to express their personal style.
               </p>
               <p className="text-gray-600">
                 What began as a small boutique has grown into a trusted name in custom fashion, known for our attention to detail and commitment to craftsmanship.

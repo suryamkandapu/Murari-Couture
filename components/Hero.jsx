@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6"
         >
-          Project G
+          Murari Couture
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 50 }}

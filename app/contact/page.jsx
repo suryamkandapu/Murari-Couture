@@ -1,3 +1,5 @@
+import { generateWhatsAppLink } from '../../lib/whatsapp';
+
 export default function Contact() {
   return (
     <div className="py-20 px-4">
@@ -18,7 +20,7 @@ export default function Contact() {
               <div>
                 <h3 className="font-semibold">WhatsApp</h3>
                 <a
-                  href="https://wa.me/9550981547?text=Hi%20Project%20G"
+                  href={generateWhatsAppLink()}
                   className="inline-block bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors"
                 >
                   Message us on WhatsApp

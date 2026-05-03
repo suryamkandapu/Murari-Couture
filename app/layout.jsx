@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export const metadata = {
-  title: 'Project G - Boutique Blouse Designs',
+  title: 'Murari Couture - Boutique Blouse Designs',
   description: 'Premium custom blouse designs for the modern woman',
 }
 

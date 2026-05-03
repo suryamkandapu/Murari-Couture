@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import { generateWhatsAppLink } from '../lib/whatsapp';
 
 export default function CTA() {
   const pathname = usePathname();
@@ -46,7 +47,7 @@ export default function CTA() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          href="https://wa.me/9550981547?text=Hi%20Project%20G,%20I'm%20interested%20in%20custom%20blouse%20designs"
+          href={generateWhatsAppLink()}
           className={`inline-flex items-center gap-2 px-7 py-3 rounded-full font-medium text-sm md:text-base 
           shadow-lg hover:shadow-xl transition-all duration-300 ${current.button}`}
         >
